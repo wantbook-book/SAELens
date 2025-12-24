@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any, Generic
 
 import torch
-import wandb
+from sae_lens.wandb_compat import wandb
 from safetensors.torch import save_file
 from simple_parsing import ArgumentParser
 from transformer_lens.hook_points import HookedRootModule
