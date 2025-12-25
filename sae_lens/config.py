@@ -3,11 +3,10 @@ import math
 import warnings
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
-from typing import TYPE_CHECKING, Any, Generic, Literal, TypeVar, cast
+from typing import TYPE_CHECKING, Any, Generic, Literal, TypeVar
 
 import simple_parsing
 import torch
-from sae_lens.wandb_compat import BACKEND, generate_id, wandb
 from datasets import (
     Dataset,
     DatasetDict,
@@ -20,6 +19,7 @@ from sae_lens import __version__, logger
 from sae_lens.registry import get_sae_training_class
 from sae_lens.saes.sae import TrainingSAEConfig
 from sae_lens.util import str_to_dtype
+from sae_lens.wandb_compat import BACKEND, generate_id, wandb
 
 if TYPE_CHECKING:
     pass

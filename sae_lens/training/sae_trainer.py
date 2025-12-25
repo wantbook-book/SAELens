@@ -4,7 +4,6 @@ from pathlib import Path
 from typing import Any, Callable, Generic, Protocol
 
 import torch
-from sae_lens.wandb_compat import BACKEND, wandb
 from safetensors.torch import save_file
 from torch.optim import Adam
 from tqdm.auto import tqdm
@@ -28,6 +27,7 @@ from sae_lens.training.activation_scaler import ActivationScaler
 from sae_lens.training.optim import CoefficientScheduler, get_lr_scheduler
 from sae_lens.training.types import DataProvider
 from sae_lens.util import path_or_tmp_dir
+from sae_lens.wandb_compat import BACKEND, wandb
 
 
 def _log_feature_sparsity(
