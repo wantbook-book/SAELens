@@ -6,10 +6,10 @@ from pathlib import Path
 from typing import Any, cast
 
 import torch
+import wandb
 from simple_parsing import ArgumentParser
 from transformer_lens.hook_points import HookedRootModule
 
-import wandb
 from tests._comparison.sae_lens_old import logger
 from tests._comparison.sae_lens_old.config import (
     HfDataset,
